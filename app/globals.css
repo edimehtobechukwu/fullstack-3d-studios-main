@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "aeonik";
+  src: url("/aeonik-font/Aeonik-Light.otf");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "aeonik";
+  src: url("/aeonik-font/Aeonik-Regular.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "aeonik";
+  src: url("/aeonik-font/Aeonik-Bold.otf");
+  font-weight: bold;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --bg-color: white;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--bg-color);
+  font-family: "aeonik", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.services-img {
+  background-image: url("/pexels-gdtography-911738.jpg");
+  border-radius: 4rem;
+}
+
+/* Input */
+.input_style {
+  @apply border-b-[1px] border-b-black active:border-b-[#133474] mt-4;
+}
+.input_style-2 {
+  @apply border-b-[1px] border-b-white mt-4;
+}
+
+/* Margins */
+.section_margin_block {
+  @apply my-[70px] md:my-[80px] lg:my-[150px];
+}
+
+/* Headings */
+.heading_hero {
+  @apply text-black text-3xl sm:text-5xl mb-[40px] max-md:text-center;
+}
+
+/* Paddings */
+.section_padding {
+  @apply p-[15px] md:p-[25px] lg:p-[65px];
+}
+.section_padding_inline {
+  @apply px-[20px] md:px-[30px] lg:px-[65px];
+}
+
+/* Animation */
+.animate_zoom_in {
+  animation: zoomIn 1s ease-in forwards;
+  transition: all 1s;
+}
+
+.animate_zoom_out {
+  animation: zoomOut 1s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
